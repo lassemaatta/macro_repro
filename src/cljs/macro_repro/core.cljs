@@ -7,6 +7,12 @@
    [clerk.core :as clerk]
    [accountant.core :as accountant]))
 
+(defn problem-repro
+  []
+  ;; No docstring (or jump to implementation) for with-let :sadpanda:
+  (reagent/with-let [*foo (reagent/atom {})]
+    [:span (str @*foo)]))
+
 ;; -------------------------
 ;; Routes
 
